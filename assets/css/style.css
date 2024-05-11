@@ -1,0 +1,391 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto%3Awght%40300%3B400%3B500%3B700%3B900&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus{
+    outline: none;
+}
+
+body{
+    width: 100%;
+    background: #fdfdfd;
+    position: relative;
+    font-family: 'roboto','sans-serif';
+}
+.menu-principal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-bottom:1px solid #dfdfdf ;
+    display: flex;   
+    justify-content: center;
+    padding: 5px 0px;
+    z-index: 99;
+}
+
+.menu-links{
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.logomarca{
+    height: 100%;
+    margin-top: 20px;
+    color: rgb(0, 187, 0);
+}
+
+a{
+    text-decoration: none;
+}
+.busca-topo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 35px;
+    background: #eeee;
+    border: 1px solid #f7f7f7;
+    border-radius: 5px;
+    color: rgba(0,0,0,0.5);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.busca-topo::placeholder{
+    color: rgb(194,187,187);
+}
+
+.menu-icones{
+    height: 22px;
+    position: relative;
+
+}
+
+.icone{
+    height: 100%;
+    cursor: pointer;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+.perfil{
+    width: 23px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.conteudo-geral{
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 80%  20%;
+    gap: 30px;
+}
+.corpo-prinicpal{
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+.coluna-esqueda{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.status-destaques{
+    margin-top: 50px;
+    width: 100%;
+    height: 120px;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    padding-left: 0px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: auto;
+} 
+
+.status-destaques::-webkit-scrollbar{
+    display: none;
+}
+
+.item-destaque{
+    flex: 0 0 auto;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+
+}
+
+.miniatura-perfil{
+    width: 60px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 3px;
+    background: rgb(5, 196, 5);
+}
+
+.miniatura-perfil img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.nome-usuario{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.postagem{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    margin-top: 40px;
+}
+
+.infomacoes{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.informacoes .nome-usuario{
+    width: auto;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.informacoes .opcoes{
+    height: 10px;
+    cursor: pointer;
+    margin-left: auto;
+
+}
+
+.informacoes .usuario{
+    display: flex;
+    align-items: center;
+}
+
+.informacoes .miniatura-perfil{
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    background: none;
+}
+
+.informacoes .miniatura-perfil img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.conteudo-postagem{
+width: 100%;
+padding: 20px;
+}
+
+.curtidas{
+    font-weight: bold;
+}
+
+.descricao{
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+.descricao span{
+    font-weight: bold;
+    margin-right: 10px;
+}
+.tempo-post{
+    color: rgba(0,0,0,0.5);
+    font-size: 12px;
+}
+
+.comentario-msg{
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px
+}
+
+.comentario-postagem{
+        width: 100%;
+        height: 50px;
+        border-radius: 1px solid #dfdfdf;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.comentario-postagem .icone{
+    height: 30px;
+}
+
+.comentario-btn{
+    width: 70px;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: rgb(0, 156, 60);
+    border-radius: 20%;
+    font-weight: bold;
+}
+
+.reacoes-icones{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    margin-top:-20px;
+    align-items: center;
+}
+.reacoes-icones .icones{
+    height: 25px;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.salvar{ 
+    margin-left: auto;
+}
+.capa-post{
+    width: 100%;
+}
+
+.coluna-direita{
+    padding:20px;
+
+}
+
+.corpo-do-perfil{
+    width: fit-content;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.corpo1{
+    padding-top:50px ;
+}
+
+
+.corpo-do-perfil .miniatura-perfil{
+    flex: 0 0 auto;
+    padding: 0;
+    background: none;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.corpo-do-perfil:first-child .miniatura-perfil{
+    width: 70px;
+    height: 70px;
+}
+.corpo-do-perfil .miniatura-perfil img{
+    border: none;
+}
+.corpo-do-perfil .nome-usuario{
+font-weight: 500;
+font-size: 14px;
+color: black;
+text-align: left;
+}
+.sub-texto{
+    color: rgba(0,0,0,0.5);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.mudar-btn{
+    opacity: 1;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 5px;
+    background: rgb(5, 143, 223);
+    border: 1px solid black;
+    border-radius: 4px;
+
+}
+.carregando{
+    padding: 3px;
+    color: rgba(0, 0, 0, 0.822);
+    font-weight: bold;
+}
+.img-carregando{
+    text-align: center;
+}
+.img2{
+    width: 150px;
+}
+.sugestoes-texto{
+    float: right;
+    font-size: 13px;
+    color: rgba(0,0,0,0.5);
+    font-weight: 700;
+    margin-right: 75px
+}
+
+@media(max-width: 1100px){
+    .coluna-direita,.busca-topo{
+        display: none;
+    }
+    
+    .menu-links, .conteudo-geral{
+        width: 100%;
+    }
+    .conteudo-geral{
+        display: block;
+    }
+}
+@media(max-width:500px ){
+    .menu-icones, .icone{
+        margin: 0 5px;
+    }
+    .capa-post{
+        width: 100%;
+        height: auto;
+    }
+    .logomarca{
+        display: none;
+    }
+    
+}
